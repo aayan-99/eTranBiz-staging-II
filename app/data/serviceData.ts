@@ -33,7 +33,7 @@ import oracleCloud from '@/app/assets/images/landingpremiumservices/01.png'
 import oracleCloudHero from '@/app/assets/images/services/premiumservices/oracleCloudHero.webp'
 
 import oracleBusiness from '@/app/assets/images/landingpremiumservices/02.png'
-import oracleEBusinessHero from '@/app/assets/images/services/premiumservices/oracleEBusinessHero.webp'
+import oracleEBusinessHero from '@/app/assets/images/services/premiumservices/oracleEbusinessHero.webp'
 
 import oracleDatabase from '@/app/assets/images/landingpremiumservices/03.png'
 import oracleDatabaseHero from '@/app/assets/images/services/premiumservices/oracleDatabaseHero.webp'
