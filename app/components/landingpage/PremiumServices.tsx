@@ -15,6 +15,14 @@ const PremiumServices = () => {
 
     const statsRefs = premiumServicesData.stats.map(() => useRef(null));
 
+    const handleStatRefs = (observer: IntersectionObserver) => {
+        statsRefs.forEach((ref) => {
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+        });
+    }
+
     useEffect(() => {
         const options = {
             threshold: 0.5, // Adjust this threshold as needed
@@ -30,11 +38,7 @@ const PremiumServices = () => {
             });
         }, options);
 
-        statsRefs.forEach((ref) => {
-            if (ref.current) {
-                observer.observe(ref.current);
-            }
-        });
+        handleStatRefs(observer);
 
         // Disconnect the observer when the component is unmounted
         return () => {

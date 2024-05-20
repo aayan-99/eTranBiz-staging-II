@@ -7,7 +7,7 @@ import { oracleServices } from '@/app/data/serviceData';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const page = () => {
+const Page = () => {
     const { oracleServiceId } = useParams();
 
     const [oracleData, setOracleData] = useState({
@@ -66,4 +66,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
