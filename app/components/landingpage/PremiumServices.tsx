@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { RefObject, useEffect, useRef, useState } from 'react'
 import arrow from '@/app/assets/icons/arrow.svg'
 import SecondaryButton from '@/app/components/global/SecondaryButton'
 import CountUp from 'react-countup'
@@ -13,10 +13,11 @@ const PremiumServices = () => {
 
     const [isVisible, setIsVisible] = useState(false);
 
-    const statsRefs = premiumServicesData.stats.map(() => useRef(null));
+    // const statsRefs = premiumServicesData.stats.map(() => useRef(null));
+    const statsRefs = useRef<RefObject<HTMLDivElement>[]>(premiumServicesData.stats.map(() => React.createRef<HTMLDivElement>()));
 
     const handleStatRefs = (observer: IntersectionObserver) => {
-        statsRefs.forEach((ref) => {
+        statsRefs.current.forEach((ref) => {
             if (ref.current) {
                 observer.observe(ref.current);
             }
@@ -44,7 +45,7 @@ const PremiumServices = () => {
         return () => {
             observer.disconnect();
         };
-    }, [statsRefs]);
+    }, [statsRefs, handleStatRefs]);
 
     return (
         <div className='w-full px-[2.5rem] md:px-[10rem] xl:px-[18rem] pt-[100px] md:pt-[260px] pb-[160px]'>
@@ -79,7 +80,7 @@ const PremiumServices = () => {
                                     </>
                                 )}
                             </h1>
-                            <h1 ref={statsRefs[index]} className='text-white text-[25px] font-[400]'>
+                            <h1 ref={statsRefs.current[index]} className='text-white text-[25px] font-[400]'>
                                 {data.title}
                             </h1>
                         </div>
