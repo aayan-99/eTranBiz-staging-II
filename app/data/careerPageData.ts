@@ -1,4 +1,4 @@
-import careerHeroImg from '@/app/assets/images/careerpage/career_hero.png'
+import careerHeroImg from '@/app/assets/images/careerpage/careerpagehero.webp'
 import clientImage from '@/app/assets/images/client_sample.webp'
 
 

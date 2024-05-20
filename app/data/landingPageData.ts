@@ -1,7 +1,6 @@
 import caseStudyImage from '@/app/assets/images/rectangle.svg'
 import clientImage from '@/app/assets/images/client_sample.webp'
-import heroImg1 from '@/app/assets/images/landingpagecarousal/hero1.png'
-import heroImg2 from '@/app/assets/images/landingpagecarousal/hero2.png'
+import heroImg1 from '@/app/assets/images/landingpagecarousal/herobanner.jpg'
 import building from '@/app/assets/images/building.webp'
 
 import case_study_01 from '@/app/assets/images/case_studies_01.png'
@@ -18,7 +17,7 @@ export const heroCarousalData = [
     },
     {
         id: 2,
-        image: heroImg2,
+        image: heroImg1,
     },
 ];
 

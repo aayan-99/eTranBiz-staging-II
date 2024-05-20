@@ -12,7 +12,7 @@ const page = () => {
 
   return (
     <div className='pb-20'>
-      <SecondaryHeroSection title={title} image={heroImg?.src} content={heroContent} />
+      <SecondaryHeroSection title={title} image={heroImg} content={heroContent} />
       <div className='px-[2.5rem] md:px-[10rem] xl:px-[18rem] py-20'>
         <p className='text-2xl mb-8 text-[color:var(--primary-teal)]'>{contentTitle?.split(' ')[0]}
           <span className='text-[#CEFF00] relative mx-1'>

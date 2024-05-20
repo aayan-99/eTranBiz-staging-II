@@ -14,9 +14,9 @@ const HeroCarousal = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: false,
+        pauseOnHover: true,
     };
 
     return (
@@ -25,9 +25,9 @@ const HeroCarousal = () => {
                 <Slider {...settings}>
                     {
                         heroCarousalData?.map((data) => (
-                            <div key={data?.id} className='relative w-full h-[90vh]'>
-                                <Image src={data?.image?.src} fill={true} alt='Hero Image' className='z-[70] static max-h-[90vh] object-cover' />
-                                <div className='absolute bg-gradient-to-b from-transparent to-[#131313] bottom-0 h-[10vh] right-0 left-0'></div>
+                            <div key={data?.id} className='relative w-full h-[95vh]'>
+                                <Image src={data?.image?.src} fill={true} alt='Hero Image' className='z-[70] static max-h-[95vh] object-cover' />
+                                <div className='absolute z-[70] bg-gradient-to-b from-transparent to-[#131313] bottom-0 h-[20vh] right-0 left-0'></div>
                             </div>
                         ))
                     }
